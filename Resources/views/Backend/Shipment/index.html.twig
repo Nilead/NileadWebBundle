@@ -1,0 +1,14 @@
+{% extends 'NileadWebBundle:Backend:layout.html.twig' %}
+
+{% block content %}
+    {{ parent() }}
+
+    {{ nilead_menu_render('main') }}
+
+    {#<div class="pagerfanta">#}
+        {#{% for data in shipments.currentPageResults %}#}
+            {#<li>{{ data.getId }}</li>#}
+        {#{% endfor %}#}
+        {#{{ pagerfanta(shipments, 'twitter_bootstrap') }}#}
+    {#</div>#}
+{% endblock %}

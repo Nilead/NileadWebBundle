@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="nilead.frontned.account.index" path="/">
+        <default key="_controller">NileadCoreBundle:User:index</default>
+        <default key="a">Tee</default>
+    </route>
+
+    <route id="nilead.account.edit_info" path="/edit">
+        <default key="_controller">NileadCoreBundle:User:edit</default>
+    </route>
+
+    <route id="nilead.account.add_address" path="/add_address">
+        <default key="_controller">NileadCoreBundle:User:addAddress</default>
+    </route>
+
+    <route id="nilead.account.remove_address" path="/remove_address/{id}">
+        <default key="_controller">NileadCoreBundle:User:removeAddress</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <route id="nilead.account.edit_address" path="/edit_address/{id}">
+        <default key="_controller">NileadCoreBundle:User:editAddress</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <route id="nilead.account.create_profile" path="/create_profile">
+        <default key="_controller">NileadCoreBundle:User:createProfile</default>
+    </route>
+</routes>
