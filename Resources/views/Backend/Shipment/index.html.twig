@@ -3,7 +3,7 @@
 {% block content %}
     {{ parent() }}
 
-    {{ nilead_menu_render('main') }}
+    {{ nilead_menu_render('main', {'template':'NileadMenuBundle::knp_menu.html.twig'}) }}
 
     {#<div class="pagerfanta">#}
         {#{% for data in shipments.currentPageResults %}#}

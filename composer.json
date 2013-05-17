@@ -1,0 +1,32 @@
+{
+    "name": "nilead/web-bundle",
+    "type": "symfony-bundle",
+    "description": "The \"Nilead Web Bundle\"",
+    "authors": [
+        {
+            "name": "Raine Ng",
+            "email": "vunguyen@rubikin.com",
+            "homepage": "http://rubikin.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1",
+        "nilead/core-bundle": "0.1.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nilead\\WebBundle": ""
+        }
+    },
+    "target-dir": "Nilead/WebBundle",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.1-dev"
+        }
+    }
+}
