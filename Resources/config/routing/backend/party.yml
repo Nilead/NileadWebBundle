@@ -1,0 +1,6 @@
+party_index:
+    pattern: /
+    defaults:
+        _controller:  nilead.controller.party:indexAction
+        _sylius:
+            template: NileadWebBundle:Backend/Party:index.html.twig

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="nilead.backend.shipment.index" path="/{page}" methods="GET">
+        <default key="_controller">NileadShipmentsBundle:Shipment:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+        <default key="nilead.template">NileadWebBundle:Backend/Shipment:index.html.twig</default>
+    </route>
+
+    <route id="nilead.shipment.get_rates" path="/get-rates">
+        <default key="_controller">NileadShipmentsBundle:Shipment:getShipRates</default>
+    </route>
+
+    <route id="nilead.shipment.create_shipment" path="/create-shipment">
+        <default key="_controller">NileadShipmentsBundle:Shipment:create</default>
+    </route>
+
+    <route id="nilead.shipment.delete_shipment" path="/delete-shipment/{id}">
+        <default key="_controller">NileadShipmentsBundle:Shipment:delete</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <route id="nilead.shipment.create_route" path="/create-route/{shipmentId}">
+        <default key="_controller">NileadShipmentsBundle:Shipment:createRoute</default>
+        <requirement key="shipmentId">\d+</requirement>
+    </route>
+</routes>
