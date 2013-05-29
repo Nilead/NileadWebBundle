@@ -6,4 +6,9 @@
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/account.xml" prefix="account"/>
 
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/product.xml" prefix="product"/>
+
+	<route id="nilead.index" path="/">
+        <default key="_controller">NileadWebBundle:Index:index</default>
+    </route>
 </routes>
