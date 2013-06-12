@@ -4,9 +4,20 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="nilead.frontned.account.index" path="/">
+    <route id="nilead.account.login" path="/login">
+        <default key="_controller">NileadCoreBundle:User:login</default>
+    </route>
+
+    <route id="nilead.account.register" path="/register">
+        <default key="_controller">NileadCoreBundle:User:register</default>
+    </route>
+
+    <route id="nilead.account.index" path="/">
         <default key="_controller">NileadCoreBundle:User:index</default>
-        <default key="a">Tee</default>
+    </route>
+
+    <route id="nilead.account.order_history" path="/orders">
+        <default key="_controller">NileadCoreBundle:User:orderHistory</default>
     </route>
 
     <route id="nilead.account.edit_info" path="/edit">

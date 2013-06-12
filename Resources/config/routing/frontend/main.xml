@@ -8,7 +8,7 @@
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/product.xml" prefix="product"/>
 
-	<route id="nilead.index" path="/">
-        <default key="_controller">NileadWebBundle:Index:index</default>
-    </route>
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/cart.xml" prefix="cart"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/checkout.xml" prefix="checkout"/>
 </routes>

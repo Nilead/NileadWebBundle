@@ -4,7 +4,14 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
+    <route id="admin_index" path="/">
+        <default key="_controller">NileadCoreBundle:Admin:index</default>
+    </route>
+
+
+
     <import resource="@NileadWebBundle/Resources/config/routing/backend/shipment.xml" prefix="/shipment"/>
 
-    <import resource="@NileadWebBundle/Resources/config/routing/backend/party.yml" prefix="/party"/>
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/security.xml"/>
+
 </routes>
