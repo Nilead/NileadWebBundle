@@ -4,16 +4,38 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <import resource="@NileadWebBundle/Resources/config/routing/frontend/account.xml" prefix="account"/>
-
-    <route id="index" path="/">
+    <!--Main route-->
+    <route id="nilead.frontend.index" path="/">
         <default key="_controller">NileadCoreBundle:MyTest:index</default>
     </route>
+
+    <!--Account routes-->
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/account.xml" prefix="account"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/product.xml" prefix="product"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/cart.xml" prefix="cart"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/checkout.xml" prefix="checkout"/>
 
     <route id="product_listing" path="/category/{slug}/{page}">
         <default key="_controller">NileadCoreBundle:MyTest:productListing</default>
         <default key="page">1</default>
         <requirement key="page">\d+</requirement>
     </route>
+
+    <route id="nilead.product.latest" path="/latest">
+        <default key="_controller">NileadCoreBundle:MyTest:productLatest</default>
+    </route>
+
+    <route id="nilead.contact_us" path="/contact">
+        <default key="_controller">NileadCoreBundle:MyTest:contact</default>
+    </route>
+
+    <route id="nilead.about_us" path="/about">
+        <default key="_controller">NileadCoreBundle:MyTest:about</default>
+    </route>
+
+
 
 </routes>
