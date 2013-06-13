@@ -4,7 +4,11 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="nilead.frontend.checkout.checkout" path="/">
-        <default key="_controller">NileadCoreBundle:Checkout/Checkout:checkout</default>
+    <route id="nilead.checkout" path="/checkout">
+        <default key="_controller">NileadCoreBundle:MyTest:checkout</default>
+    </route>
+
+    <route id="nilead.frontend.checkout.index" path="/">
+        <default key="_controller">NileadCoreBundle:Checkout/Checkout:index</default>
     </route>
 </routes>

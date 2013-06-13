@@ -4,12 +4,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <!--Main route-->
-    <route id="nilead.frontend.index" path="/">
-        <default key="_controller">NileadCoreBundle:MyTest:index</default>
-    </route>
-
-    <!--Account routes-->
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/account.xml" prefix="account"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/product.xml" prefix="product"/>
@@ -17,6 +11,11 @@
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/cart.xml" prefix="cart"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/checkout.xml" prefix="checkout"/>
+
+    <!--Main route-->
+    <route id="nilead.frontend.index" path="/">
+        <default key="_controller">NileadCoreBundle:MyTest:index</default>
+    </route>
 
     <route id="product_listing" path="/category/{slug}/{page}">
         <default key="_controller">NileadCoreBundle:MyTest:productListing</default>
@@ -35,7 +34,4 @@
     <route id="nilead.about_us" path="/about">
         <default key="_controller">NileadCoreBundle:MyTest:about</default>
     </route>
-
-
-
 </routes>
