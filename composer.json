@@ -11,9 +11,8 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.1",
-        "nilead/core-bundle": "0.1.*"
-    },
+        "symfony/framework-bundle": "~2.3"
+	},
     "config": {
         "bin-dir": "bin"
     },
@@ -26,7 +25,7 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.4-dev"
+            "dev-master": "0.1.8.x-dev"
         }
     }
 }

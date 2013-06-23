@@ -21,13 +21,21 @@ a:hover {
     overflow: hidden;
 }
 
+.product {
+    height: 350px;
+    text-align: center;
+}
+
+.product img {
+    max-height: 200px;
+}
 /*END CONTENT*/
 
 /*FOOTER*/
 footer {
     background: none repeat scroll 0 0 #111111;
     color: #BBBBBB;
-    padding: 50px 0 0;
+    padding: 20px 0 0;
 }
 
 footer ul li a {

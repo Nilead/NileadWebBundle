@@ -16,11 +16,12 @@
         <default key="_controller">NileadCoreBundle:Cart/Cart:clear</default>
     </route>
 
-    <route id="nilead.frontend.cart.add" path="/add">
+    <route id="nilead.frontend.cart.add" path="/add/{id}">
         <default key="_controller">NileadCoreBundle:Cart/CartItem:add</default>
+        <requirement key="id">\d+</requirement>
     </route>
 
-    <route id="nilead.frontend.cart.remove" path="/{id}/remove">
+    <route id="nilead.frontend.cart.remove" path="/remove/{id}">
         <default key="_controller">NileadCoreBundle:Cart/CartItem:remove</default>
         <requirement key="id">\d+</requirement>
     </route>

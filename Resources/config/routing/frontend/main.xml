@@ -11,4 +11,35 @@
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/cart.xml" prefix="cart"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/checkout.xml" prefix="checkout"/>
+
+    <!--Main route-->
+    <route id="nilead.frontend.index" path="/">
+        <default key="_controller">NileadCoreBundle:MyTest:index</default>
+    </route>
+
+<!--     <route id="nilead.frontend.category" path="/category/{slug}/{page}">
+        <default key="_controller">NileadCoreBundle:MyTest:productListing</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route> -->
+
+    <route id="nilead.frontend.product.listing_by_category" path="/category/{slug}/{page}">
+        <default key="_controller">NileadCoreBundle:Product:listingByCategory</default>
+        <default key="page">1</default>
+
+        <requirement key="slug">[\w\-]+</requirement>
+        <requirement key="page">[\d]+</requirement>
+    </route>
+
+    <route id="nilead.product.latest" path="/latest">
+        <default key="_controller">NileadCoreBundle:MyTest:productLatest</default>
+    </route>
+
+    <route id="nilead.contact_us" path="/contact">
+        <default key="_controller">NileadCoreBundle:MyTest:contact</default>
+    </route>
+
+    <route id="nilead.about_us" path="/about">
+        <default key="_controller">NileadCoreBundle:MyTest:about</default>
+    </route>
 </routes>

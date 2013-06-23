@@ -8,4 +8,8 @@
 
     <import resource="@NileadWebBundle/Resources/config/routing/backend/main.xml" prefix="/admin"/>
 
+    <route id="create_menu" path="/menu">
+        <default key="_controller">NileadMenuBundle:Test:test</default>
+    </route>
+
 </routes>
