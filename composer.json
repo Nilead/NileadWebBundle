@@ -22,10 +22,9 @@
         }
     },
     "target-dir": "Nilead/WebBundle",
-    "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.9.x-dev"
+            "dev-master": "0.1.10.x-dev"
         }
     }
 }
