@@ -1,7 +1,0 @@
-{% if app.user %}
-    <a id="account" href="{{ path('nilead.account.index') }}">{{ app.user.getUserName() }}</a>
-    <a id="logout" href="{{ path('fos_user_security_logout') }}">Logout</a>
-{% else %}
-    <a id="login" href="{{ path('fos_user_security_login') }}">Login</a>
-    <a id="register" href="{{ path('fos_user_registration_register') }}">Register</a>
-{% endif %}
