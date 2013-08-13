@@ -11,4 +11,9 @@
         <requirement key="slug">[\w\-]+</requirement>
         <requirement key="format">.html|.rss</requirement>
     </route>
+
+    <route id="nilead.frontend.product.filter_form" path="/filter_form">
+        <default key="_controller">NileadCoreBundle:Product:filterForm</default>
+    </route>
+
 </routes>

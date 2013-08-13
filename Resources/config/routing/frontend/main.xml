@@ -12,6 +12,10 @@
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/checkout.xml" prefix="checkout"/>
 
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/pricing.xml" prefix="currency"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/api.xml" prefix="api"/>
+
     <!--Main route-->
     <route id="nilead.frontend.index" path="/">
         <default key="_controller">NileadCoreBundle:MyTest:index</default>
@@ -35,11 +39,19 @@
         <default key="_controller">NileadCoreBundle:MyTest:productLatest</default>
     </route>
 
-    <route id="nilead.contact_us" path="/contact">
-        <default key="_controller">NileadCoreBundle:MyTest:contact</default>
+    <route id="nilead.contact_us" path="/contact-us">
+        <default key="_controller">NileadCoreBundle:Ezpages:contact</default>
     </route>
 
-    <route id="nilead.about_us" path="/about">
-        <default key="_controller">NileadCoreBundle:MyTest:about</default>
+    <route id="nilead.about_us" path="/about-us">
+        <default key="_controller">NileadCoreBundle:Ezpages:about</default>
+    </route>
+
+    <route id="nilead.shipping" path="/delivery-return">
+        <default key="_controller">NileadCoreBundle:Ezpages:shipping</default>
+    </route>
+
+    <route id="nilead.term" path="/term-condition">
+        <default key="_controller">NileadCoreBundle:Ezpages:term</default>
     </route>
 </routes>

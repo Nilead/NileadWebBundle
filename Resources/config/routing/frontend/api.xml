@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <!-- product -->
+    <route id="nilead.api.product.show" path="/product/{slug}/show">
+        <default key="_controller">NileadCoreBundle:Api/Product:show</default>
+    </route>
+
+    <route id="nilead.api.product.search" path="/product/{alias}/search">
+        <default key="_controller">NileadCoreBundle:Api/Product:search</default>
+    </route>
+
+    <!-- taxon -->
+    <route id="nilead.api.taxon.show" path="/taxon/{slug}/show">
+        <default key="_controller">NileadCoreBundle:Api/Taxon:show</default>
+    </route>
+
+    <route id="nilead.api.taxon.search" path="/taxon/{alias}/search">
+        <default key="_controller">NileadCoreBundle:Api/Taxon:search</default>
+    </route>
+</routes>

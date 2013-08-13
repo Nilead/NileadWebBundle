@@ -33,8 +33,12 @@
         <default key="_controller">NileadCoreBundle:User:viewAddressBook</default>
     </route>
 
-    <route id="nilead.frontend.account.add_address" path="/address/add">
-        <default key="_controller">NileadCoreBundle:User:addAddress</default>
+    <route id="nilead.frontend.account.add_address" path="/address/add" methods="GET">
+        <default key="_controller">NileadCoreBundle:User:newAddress</default>
+    </route>
+
+    <route id="nilead.frontend.account.post_address" path="/address/add" methods="POST">
+        <default key="_controller">NileadCoreBundle:User:postAddress</default>
     </route>
 
     <route id="nilead.frontend.account.delete_address" path="/address/delete/{id}">
@@ -45,6 +49,10 @@
     <route id="nilead.frontend.account.edit_address" path="/address/edit/{id}">
         <default key="_controller">NileadCoreBundle:User:editAddress</default>
         <requirement key="id">\d+</requirement>
+    </route>
+
+    <route id="nilead.frontend.account.post_edit_address" path="/address/edit" methods="POST">
+        <default key="_controller">NileadCoreBundle:User:postEditAddress</default>
     </route>
 
     <route id="nilead.frontend.account.create_profile" path="/create_profile">

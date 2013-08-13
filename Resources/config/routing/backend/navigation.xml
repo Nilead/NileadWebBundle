@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <!-- Index Listing -->
+    <route methods="GET" id="nilead.backend.navigation.index" path="/{page}">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:index</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+
+    <!-- Item Create -->
+    <route methods="GET" id="nilead.backend.navigation.create" path="/create">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:create</default>
+    </route>
+
+    <!-- Item Create Process -->
+    <route methods="POST" id="nilead.backend.navigation.store" path="/">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:store</default>
+    </route>
+
+    <!-- Item Show -->
+    <route methods="GET" id="nilead.backend.navigation.show" path="/{id}/show">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:show</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <!-- Item Edit -->
+    <route methods="GET" id="nilead.backend.navigation.edit" path="/{id}/edit">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:edit</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <!-- Item Update / Edit Process -->
+    <route methods="PUT" id="nilead.backend.navigation.update" path="/{id}">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:update</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <!-- Item Delete -->
+    <route methods="DELETE" id="nilead.backend.navigation.delete" path="/{id}">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:delete</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+
+    <!-- Reorder Items -->
+    <route id="nilead.backend.navigation.reorder" path="/reorder" methods="POST">
+        <default key="_controller">NileadCoreBundle:Backend/Navigation:reorder</default>
+    </route>
+</routes>
