@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
     <route id="nilead.frontend.product.info" path="/{slug}{format}">
-        <default key="_controller">NileadCoreBundle:Product:index</default>
+        <default key="_controller">NileadCoreBundle:Product:show</default>
         <default key="format">.html</default>
 
         <requirement key="slug">[\w\-]+</requirement>
