@@ -1,0 +1,46 @@
+
+# Created by Rubikin Team.
+# ========================
+# Date: 2013-08-24
+# Time: 12:15:33 AM
+#
+# Question? Come to our website at http://rubikin.com
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+nilead.backend.property.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.property:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Property:index.html.twig
+            sortable: true
+            sorting:
+                id: asc
+
+nilead.backend.property.create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: nilead.controller.property:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Property:create.html.twig
+            redirect: nilead.backend.property.index
+
+nilead.backend.property.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT]
+    defaults:
+        _controller: nilead.controller.property:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Property:update.html.twig
+            redirect: nilead.backend.property.index
+
+nilead.backend.property.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.property:deleteAction
+        _nilead:
+            redirect: nilead.backend.property.index

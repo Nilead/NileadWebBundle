@@ -19,6 +19,10 @@
     <!-- Navigation -->
     <import resource="@NileadWebBundle/Resources/config/routing/backend/navigation.xml" prefix="navigation" />
 
+    <!-- Product -->
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/product.yml" prefix="product" />
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/property.yml" prefix="property" />
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/option.yml" prefix="option" />
 
     <!-- <import resource="@NileadWebBundle/Resources/config/routing/backend/shipment.xml" prefix="/shipment"/> -->
 

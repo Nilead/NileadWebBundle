@@ -28,7 +28,7 @@
     </route> -->
 
     <route id="nilead.frontend.product.listing_by_category" path="/category/{slug}/{page}">
-        <default key="_controller">NileadCoreBundle:Product:listingByCategory</default>
+        <default key="_controller">NileadCoreBundle:Product:indexByTaxon</default>
         <default key="page">1</default>
 
         <requirement key="slug">[\w\-]+</requirement>

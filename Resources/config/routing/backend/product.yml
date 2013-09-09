@@ -1,0 +1,70 @@
+
+# Created by Rubikin Team.
+# ========================
+# Date: 2013-08-24
+# Time: 12:15:33 AM
+#
+# Question? Come to our website at http://rubikin.com
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+nilead.backend.product.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.product:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:index.html.twig
+            # method: createFilterPaginator
+            arguments: [$criteria, $sorting]
+
+nilead.backend.product.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.product:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:create.html.twig
+            redirect: nilead.backend.product.show
+
+nilead.backend.product.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.product:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:create.html.twig
+            redirect: nilead.backend.product.show
+
+nilead.backend.product.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.product:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:update.html.twig
+            redirect: nilead.backend.product.show
+
+nilead.backend.product.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.product:deleteAction
+        _nilead:
+            redirect: nilead.backend.product.index
+
+nilead.backend.product.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.product:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:filterForm.html.twig
+
+nilead.backend.product.show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.product:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Product:show.html.twig
