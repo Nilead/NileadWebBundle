@@ -1,0 +1,26 @@
+#METHOD
+nilead.backend.group.index:
+    path: /
+    defaults:
+        _controller:  nilead.controller.group:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Group:index.html.twig
+
+nilead.backend.group.create:
+    path: /create/
+
+    defaults:
+        _controller:  nilead.controller.group:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Group:create.html.twig
+
+nilead.backend.group.update:
+    path: /{id}/edit/
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.group:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Group:update.html.twig
+            redirect: nilead.backend.group.index

@@ -1,0 +1,98 @@
+#METHOD
+nilead.backend.shipping_method.index:
+    path: /shipping_method/
+    defaults:
+        _controller:  nilead.controller.shipping_method:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Method:index.html.twig
+
+nilead.backend.shipping_method.create:
+    path: /shipping_method/create/
+    methods: [GET, POST]
+    defaults:
+        _controller:  nilead.controller.shipping_method:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Method:create.html.twig
+
+nilead.backend.shipping_method.update:
+    path: /shipping_method/{id}/edit
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipping_method:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Method:update.html.twig
+            redirect: nilead.backend.shipping_method.index
+
+nilead.backend.shipping_method.delete:
+    path: /shipping_method/{id}
+    methods: [DELETE]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipping_method:deleteAction
+
+nilead.backend.shipping_method.test:
+    path: /shipping_method/test
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipping_method:testAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Method:update.html.twig
+
+#CATEGORY
+nilead.backend.shipping_category.index:
+    path: /shipping_category/
+    defaults:
+        _controller:  nilead.controller.shipping_category:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Category:index.html.twig
+
+nilead.backend.shipping_category.create:
+    path: /shipping_category/create/
+    methods: [GET, POST]
+    defaults:
+        _controller:  nilead.controller.shipping_category:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Category:create.html.twig
+            redirect: nilead.backend.shipping_category.index
+
+nilead.backend.shipping_category.update:
+    path: /shipping_category/{id}/edit/
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipping_category:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments/Category:update.html.twig
+            redirect: nilead.backend.shipping_category.index
+
+nilead.backend.shipping_category.delete:
+    path: /shipping_category/{id}
+    methods: [DELETE]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipping_category:deleteAction
+
+#        SHIPMENT
+nilead.backend.shipment.index:
+    path: /
+    defaults:
+        _controller:  nilead.controller.shipment:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments:index.html.twig
+
+nilead.backend.shipment.update:
+    path: /{id}/edit/
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.shipment:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Shipments:update.html.twig
+            redirect: nilead.backend.shipment.index

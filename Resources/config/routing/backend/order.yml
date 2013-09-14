@@ -1,0 +1,46 @@
+#CATEGORY
+nilead.backend.order.index:
+    path: /
+    defaults:
+        _controller:  nilead.controller.order:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Order:index.html.twig
+
+nilead.backend.order.create:
+    path: /create/
+    methods: [GET, POST]
+    defaults:
+        _controller:  nilead.controller.order:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Order:create.html.twig
+            redirect: nilead.backend.shipping_category.index
+            
+nilead.backend.order.show:
+    path: /{id}
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.order:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Order:update.html.twig
+            redirect: nilead.backend.shipping_category.index
+
+nilead.backend.order.update:
+    path: /{id}/edit/
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.order:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Order:update.html.twig
+            redirect: nilead.backend.shipping_category.index
+
+nilead.backend.order.delete:
+    path: /order/{id}
+    methods: [DELETE]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.order:deleteAction

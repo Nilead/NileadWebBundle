@@ -1,0 +1,74 @@
+nilead.frontend.account.login:
+    path: /login/
+    defaults:
+        _controller:  NileadCoreBundle:User:login
+
+nilead.frontend.account.register:
+    path: /register/
+    defaults:
+        _controller:  NileadCoreBundle:User:register
+
+nilead.frontend.account.index:
+    path: /
+    defaults:
+        _controller:  NileadCoreBundle:User:index
+
+nilead.frontend.account.index_order:
+    path: /order/
+    methods: [GET]
+    defaults:
+        _controller:  NileadCoreBundle:User:indexOrder
+
+nilead.frontend.account.show_order:
+    path: /order/{id}
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  NileadCoreBundle:User:showOrder
+
+nilead.frontend.account.info:
+    path: /info/
+    defaults:
+        _controller:  NileadCoreBundle:User:editInfo
+
+#ADDRESS
+nilead.frontend.account.address_book:
+    path: /address
+    defaults:
+        _controller:  NileadCoreBundle:User:viewAddressBook
+
+nilead.frontend.account.add_address:
+    path: /address/add/
+    defaults:
+        _controller:  NileadCoreBundle:User:newAddress
+
+nilead.frontend.account.post_address:
+    path: /address/add
+    methods: [POST]
+    defaults:
+        _controller:  NileadCoreBundle:User:postAddress
+
+nilead.frontend.account.delete_address:
+    path: /address/delete/{id}
+    methods: [POST]
+    defaults:
+        _controller:  NileadCoreBundle:User:deleteAddress
+
+nilead.frontend.account.edit_address:
+    path: /address/edit/{id}
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  NileadCoreBundle:User:editAddress
+
+nilead.frontend.account.post_edit_address:
+    path: /address/edit
+    methods: [POST]
+    defaults:
+        _controller:  NileadCoreBundle:User:postEditAddress
+
+nilead.frontend.account.create_profile:
+    path: /create_profile/
+    defaults:
+        _controller:  NileadCoreBundle:User:createProfile
+

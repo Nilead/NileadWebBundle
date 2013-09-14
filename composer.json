@@ -24,7 +24,7 @@
     "target-dir": "Nilead/WebBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.14.x-dev"
+            "dev-master": "0.1.15.x-dev"
         }
     }
 }

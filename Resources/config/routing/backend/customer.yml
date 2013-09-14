@@ -1,0 +1,42 @@
+#CUSTOMER
+nilead.backend.customer.index:
+    path: /
+    defaults:
+        _controller:  nilead.controller.customer:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Customer:index.html.twig
+            criteria: { virtual: false }
+
+nilead.backend.customer.create:
+    path: /create
+    defaults:
+        _controller:  nilead.controller.customer:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Customer:create.html.twig
+
+nilead.backend.customer.change_password:
+    path: /{id}/change_password
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.customer:changePasswordAction
+
+nilead.backend.customer.update:
+    path: /{id}/edit/
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.customer:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Customer:update.html.twig
+
+nilead.backend.customer.show:
+    path: /{id}
+    methods: [GET]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.customer:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Customer:show.html.twig

@@ -24,11 +24,24 @@
     <import resource="@NileadWebBundle/Resources/config/routing/backend/property.yml" prefix="property" />
     <import resource="@NileadWebBundle/Resources/config/routing/backend/option.yml" prefix="option" />
 
-    <!-- <import resource="@NileadWebBundle/Resources/config/routing/backend/shipment.xml" prefix="/shipment"/> -->
+    <!--Order-->
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/order.yml" prefix="/order" />
+
 
     <import resource="@NileadWebBundle/Resources/config/routing/backend/security.xml"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/backend/customer.xml" prefix="/customer"/>
 
     <import resource="@NileadSettingsBundle/Resources/config/routing.xml" prefix="/settings"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/addressing.xml" prefix="/addressing"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/shipment.yml" prefix="/shipment"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/customer.yml" prefix="/customer"/>
+
+    <import resource="@NileadWebBundle/Resources/config/routing/backend/group.yml" prefix="/group"/>
+
+
+
 </routes>
