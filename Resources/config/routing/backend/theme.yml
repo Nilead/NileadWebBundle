@@ -1,0 +1,70 @@
+
+nilead.backend.theme.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.theme:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:index.html.twig
+            method: createPaginator
+#            arguments: [$criteria, $sorting]
+
+nilead.backend.theme.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.theme:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:create.html.twig
+            redirect: nilead.backend.theme.show
+
+nilead.backend.theme.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.theme:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:create.html.twig
+            redirect: nilead.backend.theme.show
+
+nilead.backend.theme.install:
+    pattern: /install
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.theme:installAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:index.html.twig
+            redirect: nilead.backend.theme.install
+
+nilead.backend.theme.update:
+    pattern: /{settingName}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.theme:updateAction
+        _nilead:
+            template: NileadDefaultThemeBundle::update.html.twig
+#            redirect: nilead.backend.theme.show
+
+nilead.backend.theme.delete:
+    pattern: /{settingName}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.theme:deleteAction
+        _nilead:
+            redirect: nilead.backend.theme.index
+
+nilead.backend.theme.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.theme:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:filterForm.html.twig
+
+nilead.backend.theme.show:
+    pattern: /{settingName}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.theme:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Theme:show.html.twig

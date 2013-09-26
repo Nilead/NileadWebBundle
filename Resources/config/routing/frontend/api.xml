@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
     <!-- product -->
-    <route id="nilead.api.product.show" path="/product/{slug}/show">
+    <route id="nilead.api.product.show" path="/product/{id}/show">
         <default key="_controller">NileadCoreBundle:Api/Product:show</default>
     </route>
 

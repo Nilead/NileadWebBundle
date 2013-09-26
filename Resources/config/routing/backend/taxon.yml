@@ -1,0 +1,61 @@
+
+nilead.backend.taxon.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.taxon:indexAction
+        _nilead:
+           template: NileadWebBundle:Backend/Taxon:index.html.twig
+            # method: createPaginator
+#            arguments: [$criteria, $sorting]
+
+nilead.backend.taxon.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.taxon:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Taxon:create.html.twig
+            redirect: nilead.backend.taxon.update
+
+nilead.backend.taxon.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.taxon:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Taxon:create.html.twig
+            redirect: nilead.backend.taxon.update
+
+nilead.backend.taxon.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.taxon:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Taxon:update.html.twig
+            redirect: nilead.backend.taxon.update
+
+nilead.backend.taxon.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.taxon:deleteAction
+        _nilead:
+            redirect: nilead.backend.taxon.index
+
+nilead.backend.taxon.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.taxon:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Taxon:filterForm.html.twig
+
+nilead.backend.taxon.show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.taxon:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Taxon:show.html.twig

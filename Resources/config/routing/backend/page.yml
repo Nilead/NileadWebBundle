@@ -1,0 +1,61 @@
+
+nilead.backend.page.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.page:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Page:index.html.twig
+            method: createPaginator
+#            arguments: [$criteria, $sorting]
+
+nilead.backend.page.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.page:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Page:create.html.twig
+            redirect: nilead.backend.page.index
+
+nilead.backend.page.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.page:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Page:create.html.twig
+            redirect: nilead.backend.page.update
+
+nilead.backend.page.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.page:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Page:update.html.twig
+            redirect: nilead.backend.page.update
+
+nilead.backend.page.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.page:deleteAction
+        _nilead:
+            redirect: nilead.backend.page.index
+
+nilead.backend.page.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.page:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Page:filterForm.html.twig
+
+#nilead.backend.page.show:
+#    pattern: /{id}
+#    methods: [GET]
+#    defaults:
+#        _controller: nilead.controller.page:showAction
+#        _nilead:
+#            template: NileadWebBundle:Backend/Page:show.html.twig

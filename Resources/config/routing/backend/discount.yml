@@ -1,0 +1,60 @@
+
+nilead.backend.discount.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.discount:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:index.html.twig
+            method: createPaginator
+
+nilead.backend.discount.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.discount:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:create.html.twig
+            redirect: nilead.backend.discount.update
+
+nilead.backend.discount.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.discount:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:create.html.twig
+            redirect: nilead.backend.discount.update
+
+nilead.backend.discount.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.discount:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:update.html.twig
+            redirect: nilead.backend.discount.update
+
+nilead.backend.discount.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.discount:deleteAction
+        _nilead:
+            redirect: nilead.backend.discount.index
+
+nilead.backend.discount.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.discount:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:filterForm.html.twig
+
+nilead.backend.discount.show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.discount:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Discount:show.html.twig

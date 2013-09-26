@@ -25,14 +25,6 @@ nilead.backend.shipping_method.update:
             template: NileadWebBundle:Backend/Shipments/Method:update.html.twig
             redirect: nilead.backend.shipping_method.index
 
-nilead.backend.shipping_method.delete:
-    path: /shipping_method/{id}
-    methods: [DELETE]
-    requirements:
-        id:  \d+
-    defaults:
-        _controller:  nilead.controller.shipping_method:deleteAction
-
 nilead.backend.shipping_method.test:
     path: /shipping_method/test
     requirements:
@@ -52,7 +44,7 @@ nilead.backend.shipping_category.index:
 
 nilead.backend.shipping_category.create:
     path: /shipping_category/create/
-    methods: [GET, POST]
+
     defaults:
         _controller:  nilead.controller.shipping_category:createAction
         _nilead:
@@ -69,30 +61,3 @@ nilead.backend.shipping_category.update:
         _nilead:
             template: NileadWebBundle:Backend/Shipments/Category:update.html.twig
             redirect: nilead.backend.shipping_category.index
-
-nilead.backend.shipping_category.delete:
-    path: /shipping_category/{id}
-    methods: [DELETE]
-    requirements:
-        id:  \d+
-    defaults:
-        _controller:  nilead.controller.shipping_category:deleteAction
-
-#        SHIPMENT
-nilead.backend.shipment.index:
-    path: /
-    defaults:
-        _controller:  nilead.controller.shipment:indexAction
-        _nilead:
-            template: NileadWebBundle:Backend/Shipments:index.html.twig
-
-nilead.backend.shipment.update:
-    path: /{id}/edit/
-    methods: [GET, PUT]
-    requirements:
-        id:  \d+
-    defaults:
-        _controller:  nilead.controller.shipment:updateAction
-        _nilead:
-            template: NileadWebBundle:Backend/Shipments:update.html.twig
-            redirect: nilead.backend.shipment.index

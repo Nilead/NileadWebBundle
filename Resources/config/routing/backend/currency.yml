@@ -1,0 +1,60 @@
+
+nilead.backend.currency.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.currency:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:index.html.twig
+            method: createPaginator
+
+nilead.backend.currency.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.currency:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:create.html.twig
+            redirect: nilead.backend.currency.update
+
+nilead.backend.currency.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.currency:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:create.html.twig
+            redirect: nilead.backend.currency.update
+
+nilead.backend.currency.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.currency:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:update.html.twig
+            redirect: nilead.backend.currency.update
+
+nilead.backend.currency.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.currency:deleteAction
+        _nilead:
+            redirect: nilead.backend.currency.index
+
+nilead.backend.currency.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.currency:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:filterForm.html.twig
+
+nilead.backend.currency.show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.currency:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/Currency:show.html.twig

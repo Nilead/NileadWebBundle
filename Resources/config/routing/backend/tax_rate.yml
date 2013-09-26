@@ -1,0 +1,61 @@
+
+nilead.backend.tax_rate.index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.tax_rate:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:index.html.twig
+            method: createPaginator
+#            arguments: [$criteria, $sorting]
+
+nilead.backend.tax_rate.create:
+    pattern: /create
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.tax_rate:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:create.html.twig
+            redirect: nilead.backend.tax_rate.update
+
+nilead.backend.tax_rate.store:
+    pattern: /create
+    methods: [POST]
+    defaults:
+        _controller: nilead.controller.tax_rate:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:create.html.twig
+            redirect: nilead.backend.tax_rate.update
+
+nilead.backend.tax_rate.update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: nilead.controller.tax_rate:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:update.html.twig
+            redirect: nilead.backend.tax_rate.update
+
+nilead.backend.tax_rate.delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nilead.controller.tax_rate:deleteAction
+        _nilead:
+            redirect: nilead.backend.tax_rate.index
+
+nilead.backend.tax_rate.filter_form:
+    pattern: /filter-form
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.tax_rate:filterFormAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:filterForm.html.twig
+
+nilead.backend.tax_rate.show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nilead.controller.tax_rate:showAction
+        _nilead:
+            template: NileadWebBundle:Backend/TaxRate:show.html.twig

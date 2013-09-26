@@ -21,10 +21,9 @@ nilead.backend.order.show:
     requirements:
         id:  \d+
     defaults:
-        _controller:  nilead.controller.order:updateAction
+        _controller:  nilead.controller.order:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Order:update.html.twig
-            redirect: nilead.backend.shipping_category.index
+            template: NileadWebBundle:Backend/Order:show.html.twig
 
 nilead.backend.order.update:
     path: /{id}/edit/
@@ -44,3 +43,11 @@ nilead.backend.order.delete:
         id:  \d+
     defaults:
         _controller:  nilead.controller.order:deleteAction
+
+nilead.backend.order.change_status:
+    path: /order/{id}/change_status
+    methods: [POST]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.order:changeStatusAction
