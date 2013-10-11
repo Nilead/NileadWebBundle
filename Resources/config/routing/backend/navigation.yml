@@ -5,7 +5,7 @@ nilead.backend.navigation.index:
     defaults:
         _controller: nilead.controller.navigation:indexAction
         _nilead:
-           template: NileadWebBundle:Backend/Navigation:index.html.twig
+           template: NileadWebBundle:Navigation:index.html.twig
             # method: createPaginator
             # arguments: [$criteria, $sorting]
 
@@ -15,7 +15,7 @@ nilead.backend.navigation.create:
     defaults:
         _controller: nilead.controller.navigation:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Navigation:create.html.twig
+            template: NileadWebBundle:Navigation:create.html.twig
             redirect: nilead.backend.navigation.update
 
 nilead.backend.navigation.store:
@@ -24,7 +24,7 @@ nilead.backend.navigation.store:
     defaults:
         _controller: nilead.controller.navigation:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Navigation:create.html.twig
+            template: NileadWebBundle:Navigation:create.html.twig
             redirect: nilead.backend.navigation.update
 
 nilead.backend.navigation.update:
@@ -33,7 +33,7 @@ nilead.backend.navigation.update:
     defaults:
         _controller: nilead.controller.navigation:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Navigation:update.html.twig
+            template: NileadWebBundle:Navigation:update.html.twig
             redirect: nilead.backend.navigation.index
 
 nilead.backend.navigation.delete:
@@ -50,7 +50,7 @@ nilead.backend.navigation.filter_form:
     defaults:
         _controller: nilead.controller.navigation:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Navigation:filterForm.html.twig
+            template: NileadWebBundle:Navigation:filterForm.html.twig
 
 nilead.backend.navigation.show:
     pattern: /{id}
@@ -58,4 +58,4 @@ nilead.backend.navigation.show:
     defaults:
         _controller: nilead.controller.navigation:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Navigation:show.html.twig
+            template: NileadWebBundle:Navigation:show.html.twig

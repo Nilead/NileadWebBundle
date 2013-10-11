@@ -4,7 +4,7 @@ nilead.backend.group.index:
     defaults:
         _controller:  nilead.controller.group:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Group:index.html.twig
+            template: NileadWebBundle:Group:index.html.twig
 
 nilead.backend.group.create:
     path: /create/
@@ -12,7 +12,7 @@ nilead.backend.group.create:
     defaults:
         _controller:  nilead.controller.group:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Group:create.html.twig
+            template: NileadWebBundle:Group:create.html.twig
 
 nilead.backend.group.update:
     path: /{id}/edit/
@@ -22,5 +22,5 @@ nilead.backend.group.update:
     defaults:
         _controller:  nilead.controller.group:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Group:update.html.twig
+            template: NileadWebBundle:Group:update.html.twig
             redirect: nilead.backend.group.index

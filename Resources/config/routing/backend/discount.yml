@@ -5,7 +5,7 @@ nilead.backend.discount.index:
     defaults:
         _controller: nilead.controller.discount:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:index.html.twig
+            template: NileadWebBundle:Discount:index.html.twig
             method: createPaginator
 
 nilead.backend.discount.create:
@@ -14,7 +14,7 @@ nilead.backend.discount.create:
     defaults:
         _controller: nilead.controller.discount:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:create.html.twig
+            template: NileadWebBundle:Discount:create.html.twig
             redirect: nilead.backend.discount.update
 
 nilead.backend.discount.store:
@@ -23,7 +23,7 @@ nilead.backend.discount.store:
     defaults:
         _controller: nilead.controller.discount:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:create.html.twig
+            template: NileadWebBundle:Discount:create.html.twig
             redirect: nilead.backend.discount.update
 
 nilead.backend.discount.update:
@@ -32,7 +32,7 @@ nilead.backend.discount.update:
     defaults:
         _controller: nilead.controller.discount:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:update.html.twig
+            template: NileadWebBundle:Discount:update.html.twig
             redirect: nilead.backend.discount.update
 
 nilead.backend.discount.delete:
@@ -49,7 +49,7 @@ nilead.backend.discount.filter_form:
     defaults:
         _controller: nilead.controller.discount:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:filterForm.html.twig
+            template: NileadWebBundle:Discount:filterForm.html.twig
 
 nilead.backend.discount.show:
     pattern: /{id}
@@ -57,4 +57,4 @@ nilead.backend.discount.show:
     defaults:
         _controller: nilead.controller.discount:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Discount:show.html.twig
+            template: NileadWebBundle:Discount:show.html.twig

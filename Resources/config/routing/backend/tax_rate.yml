@@ -5,7 +5,7 @@ nilead.backend.tax_rate.index:
     defaults:
         _controller: nilead.controller.tax_rate:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:index.html.twig
+            template: NileadWebBundle:TaxRate:index.html.twig
             method: createPaginator
 #            arguments: [$criteria, $sorting]
 
@@ -15,7 +15,7 @@ nilead.backend.tax_rate.create:
     defaults:
         _controller: nilead.controller.tax_rate:createAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:create.html.twig
+            template: NileadWebBundle:TaxRate:create.html.twig
             redirect: nilead.backend.tax_rate.update
 
 nilead.backend.tax_rate.store:
@@ -24,7 +24,7 @@ nilead.backend.tax_rate.store:
     defaults:
         _controller: nilead.controller.tax_rate:createAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:create.html.twig
+            template: NileadWebBundle:TaxRate:create.html.twig
             redirect: nilead.backend.tax_rate.update
 
 nilead.backend.tax_rate.update:
@@ -33,7 +33,7 @@ nilead.backend.tax_rate.update:
     defaults:
         _controller: nilead.controller.tax_rate:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:update.html.twig
+            template: NileadWebBundle:TaxRate:update.html.twig
             redirect: nilead.backend.tax_rate.update
 
 nilead.backend.tax_rate.delete:
@@ -50,7 +50,7 @@ nilead.backend.tax_rate.filter_form:
     defaults:
         _controller: nilead.controller.tax_rate:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:filterForm.html.twig
+            template: NileadWebBundle:TaxRate:filterForm.html.twig
 
 nilead.backend.tax_rate.show:
     pattern: /{id}
@@ -58,4 +58,4 @@ nilead.backend.tax_rate.show:
     defaults:
         _controller: nilead.controller.tax_rate:showAction
         _nilead:
-            template: NileadWebBundle:Backend/TaxRate:show.html.twig
+            template: NileadWebBundle:TaxRate:show.html.twig

@@ -8,6 +8,8 @@
     <!--Account routes-->
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/account.yml" prefix="/account"/>
 
+
+
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/product.xml" prefix="product"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/cart.xml" prefix="cart"/>
@@ -17,6 +19,12 @@
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/pricing.xml" prefix="currency"/>
 
     <import resource="@NileadWebBundle/Resources/config/routing/frontend/api.xml" prefix="api"/>
+
+    <!-- Pages -->
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/pages.yml" prefix="/pages"/>
+
+    <!-- Blog -->
+    <import resource="@NileadWebBundle/Resources/config/routing/frontend/blog.yml" prefix="/blog"/>
 
     <!--Main route-->
     <route id="nilead.frontend.index" path="/">
@@ -41,19 +49,22 @@
         <default key="_controller">NileadCoreBundle:MyTest:productLatest</default>
     </route>
 
-    <route id="nilead.contact_us" path="/contact-us">
-        <default key="_controller">NileadCoreBundle:Ezpages:contact</default>
-    </route>
 
-    <route id="nilead.about_us" path="/about-us">
-        <default key="_controller">NileadCoreBundle:Ezpages:about</default>
-    </route>
 
-    <route id="nilead.shipping" path="/delivery-return">
-        <default key="_controller">NileadCoreBundle:Ezpages:shipping</default>
-    </route>
+    <!--<route id="nilead.contact_us" path="/contact-us">-->
+        <!--<default key="_controller">NileadCoreBundle:Ezpages:contact</default>-->
+    <!--</route>-->
 
-    <route id="nilead.term" path="/term-condition">
-        <default key="_controller">NileadCoreBundle:Ezpages:term</default>
-    </route>
+    <!--<route id="nilead.about_us" path="/about-us">-->
+        <!--<default key="_controller">NileadCoreBundle:Ezpages:about</default>-->
+    <!--</route>-->
+
+    <!--<route id="nilead.shipping" path="/delivery-return">-->
+        <!--<default key="_controller">NileadCoreBundle:Ezpages:shipping</default>-->
+    <!--</route>-->
+
+    <!--<route id="nilead.term" path="/term-condition">-->
+        <!--<default key="_controller">NileadCoreBundle:Ezpages:term</default>-->
+    <!--</route>-->
+
 </routes>

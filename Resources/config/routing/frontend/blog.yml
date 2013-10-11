@@ -1,0 +1,15 @@
+nilead.frontend.blog.show:
+    path: /{slug}/
+    defaults:
+        _controller:  nilead.controller.post:indexByTaxonAction
+        _nilead:
+            template: NileadWebBundle:Blog:index.html.twig
+
+
+
+nilead.frontend.post.show:
+    path: /{slug}/{post_slug}
+    defaults:
+        _controller:  nilead.controller.post:showAction
+        _nilead:
+            template: NileadWebBundle:Blog:show.html.twig

@@ -14,7 +14,7 @@ nilead.backend.property.index:
     defaults:
         _controller: nilead.controller.property:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Property:index.html.twig
+            template: NileadWebBundle:Property:index.html.twig
             sortable: true
             sorting:
                 id: asc
@@ -25,7 +25,7 @@ nilead.backend.property.create:
     defaults:
         _controller: nilead.controller.property:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Property:create.html.twig
+            template: NileadWebBundle:Property:create.html.twig
             redirect: nilead.backend.property.index
 
 nilead.backend.property.update:
@@ -34,7 +34,7 @@ nilead.backend.property.update:
     defaults:
         _controller: nilead.controller.property:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Property:update.html.twig
+            template: NileadWebBundle:Property:update.html.twig
             redirect: nilead.backend.property.index
 
 nilead.backend.property.delete:

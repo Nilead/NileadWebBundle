@@ -5,7 +5,7 @@ nilead.backend.page.index:
     defaults:
         _controller: nilead.controller.page:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Page:index.html.twig
+            template: NileadWebBundle:Page:index.html.twig
             method: createPaginator
 #            arguments: [$criteria, $sorting]
 
@@ -15,7 +15,7 @@ nilead.backend.page.create:
     defaults:
         _controller: nilead.controller.page:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Page:create.html.twig
+            template: NileadWebBundle:Page:create.html.twig
             redirect: nilead.backend.page.index
 
 nilead.backend.page.store:
@@ -24,7 +24,7 @@ nilead.backend.page.store:
     defaults:
         _controller: nilead.controller.page:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Page:create.html.twig
+            template: NileadWebBundle:Page:create.html.twig
             redirect: nilead.backend.page.update
 
 nilead.backend.page.update:
@@ -33,7 +33,7 @@ nilead.backend.page.update:
     defaults:
         _controller: nilead.controller.page:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Page:update.html.twig
+            template: NileadWebBundle:Page:update.html.twig
             redirect: nilead.backend.page.update
 
 nilead.backend.page.delete:
@@ -50,7 +50,7 @@ nilead.backend.page.filter_form:
     defaults:
         _controller: nilead.controller.page:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Page:filterForm.html.twig
+            template: NileadWebBundle:Page:filterForm.html.twig
 
 #nilead.backend.page.show:
 #    pattern: /{id}
@@ -58,4 +58,4 @@ nilead.backend.page.filter_form:
 #    defaults:
 #        _controller: nilead.controller.page:showAction
 #        _nilead:
-#            template: NileadWebBundle:Backend/Page:show.html.twig
+#            template: NileadWebBundle:Page:show.html.twig

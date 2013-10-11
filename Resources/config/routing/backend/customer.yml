@@ -4,7 +4,7 @@ nilead.backend.customer.index:
     defaults:
         _controller:  nilead.controller.customer:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Customer:index.html.twig
+            template: NileadWebBundle:Customer:index.html.twig
             criteria: { virtual: false }
 
 nilead.backend.customer.create:
@@ -13,7 +13,7 @@ nilead.backend.customer.create:
     defaults:
         _controller:  nilead.controller.customer:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Customer:create.html.twig
+            template: NileadWebBundle:Customer:create.html.twig
 
 nilead.backend.customer.change_password:
     path: /{id}/change_password
@@ -30,7 +30,7 @@ nilead.backend.customer.update:
     defaults:
         _controller:  nilead.controller.customer:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Customer:update.html.twig
+            template: NileadWebBundle:Customer:update.html.twig
 
 nilead.backend.customer.show:
     path: /{id}
@@ -40,4 +40,4 @@ nilead.backend.customer.show:
     defaults:
         _controller:  nilead.controller.customer:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Customer:show.html.twig
+            template: NileadWebBundle:Customer:show.html.twig

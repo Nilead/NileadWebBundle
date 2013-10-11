@@ -1,0 +1,39 @@
+#METHOD
+nilead.backend.payment_method.index:
+    path: /payment_method/
+    defaults:
+        _controller:  nilead.controller.payment_method:indexAction
+        _nilead:
+            template: NileadWebBundle:Backend/Payment/Method:index.html.twig
+
+nilead.backend.payment_method.create:
+    path: /payment_method/create/
+    methods: [GET, POST]
+    defaults:
+        _controller:  nilead.controller.payment_method:createAction
+        _nilead:
+            template: NileadWebBundle:Backend/Payment/Method:create.html.twig
+
+nilead.backend.payment_method.update:
+    path: /payment_method/{id}/edit
+    methods: [GET, PUT]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.payment_method:updateAction
+        _nilead:
+            template: NileadWebBundle:Backend/Payment/Method:update.html.twig
+            redirect: nilead.backend.payment_method.index
+
+nilead.backend.payment_method.delete:
+    path: /payment_method/{id}
+    methods: [DELETE]
+    requirements:
+        id:  \d+
+    defaults:
+        _controller:  nilead.controller.payment_method:deleteAction
+
+nilead.backend.payment_method.test:
+    path: /payment_method/test
+    defaults:
+        _controller:  NileadPaymentsBundle:A:test

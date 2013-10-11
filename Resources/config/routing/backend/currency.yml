@@ -5,7 +5,7 @@ nilead.backend.currency.index:
     defaults:
         _controller: nilead.controller.currency:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:index.html.twig
+            template: NileadWebBundle:Currency:index.html.twig
             method: createPaginator
 
 nilead.backend.currency.create:
@@ -14,7 +14,7 @@ nilead.backend.currency.create:
     defaults:
         _controller: nilead.controller.currency:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:create.html.twig
+            template: NileadWebBundle:Currency:create.html.twig
             redirect: nilead.backend.currency.update
 
 nilead.backend.currency.store:
@@ -23,7 +23,7 @@ nilead.backend.currency.store:
     defaults:
         _controller: nilead.controller.currency:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:create.html.twig
+            template: NileadWebBundle:Currency:create.html.twig
             redirect: nilead.backend.currency.update
 
 nilead.backend.currency.update:
@@ -32,7 +32,7 @@ nilead.backend.currency.update:
     defaults:
         _controller: nilead.controller.currency:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:update.html.twig
+            template: NileadWebBundle:Currency:update.html.twig
             redirect: nilead.backend.currency.update
 
 nilead.backend.currency.delete:
@@ -49,7 +49,7 @@ nilead.backend.currency.filter_form:
     defaults:
         _controller: nilead.controller.currency:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:filterForm.html.twig
+            template: NileadWebBundle:Currency:filterForm.html.twig
 
 nilead.backend.currency.show:
     pattern: /{id}
@@ -57,4 +57,4 @@ nilead.backend.currency.show:
     defaults:
         _controller: nilead.controller.currency:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Currency:show.html.twig
+            template: NileadWebBundle:Currency:show.html.twig

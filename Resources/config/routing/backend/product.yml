@@ -14,7 +14,7 @@ nilead.backend.product.index:
     defaults:
         _controller: nilead.controller.product:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:index.html.twig
+            template: NileadWebBundle:Product:index.html.twig
             # method: createFilterPaginator
             arguments: [$criteria, $sorting]
 
@@ -24,7 +24,7 @@ nilead.backend.product.create:
     defaults:
         _controller: nilead.controller.product:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:create.html.twig
+            template: NileadWebBundle:Product:create.html.twig
             redirect: nilead.backend.product.show
 
 nilead.backend.product.store:
@@ -33,7 +33,7 @@ nilead.backend.product.store:
     defaults:
         _controller: nilead.controller.product:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:create.html.twig
+            template: NileadWebBundle:Product:create.html.twig
             redirect: nilead.backend.product.show
 
 nilead.backend.product.update:
@@ -42,7 +42,7 @@ nilead.backend.product.update:
     defaults:
         _controller: nilead.controller.product:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:update.html.twig
+            template: NileadWebBundle:Product:update.html.twig
             redirect: nilead.backend.product.show
 
 nilead.backend.product.delete:
@@ -59,7 +59,7 @@ nilead.backend.product.filter_form:
     defaults:
         _controller: nilead.controller.product:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:filterForm.html.twig
+            template: NileadWebBundle:Product:filterForm.html.twig
 
 nilead.backend.product.show:
     pattern: /{id}
@@ -67,4 +67,4 @@ nilead.backend.product.show:
     defaults:
         _controller: nilead.controller.product:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Product:show.html.twig
+            template: NileadWebBundle:Product:show.html.twig

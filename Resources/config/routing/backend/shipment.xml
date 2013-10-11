@@ -8,7 +8,7 @@
         <default key="_controller">NileadShipmentsBundle:Shipment:list</default>
         <default key="page">1</default>
         <requirement key="page">\d+</requirement>
-        <default key="nilead.template">NileadWebBundle:Backend/Shipment:index.html.twig</default>
+        <default key="nilead.template">NileadWebBundle:Shipment:index.html.twig</default>
     </route>
 
     <route id="nilead.shipment.get_rates" path="/get-rates">

@@ -1,0 +1,6 @@
+nilead.frontend.page.show:
+    path: /{slug}/
+    defaults:
+        _controller:  nilead.controller.page:showAction
+        _nilead:
+            template: NileadWebBundle:Page:show.html.twig

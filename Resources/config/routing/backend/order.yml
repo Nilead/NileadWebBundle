@@ -4,7 +4,7 @@ nilead.backend.order.index:
     defaults:
         _controller:  nilead.controller.order:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Order:index.html.twig
+            template: NileadWebBundle:Order:index.html.twig
 
 nilead.backend.order.create:
     path: /create/
@@ -12,7 +12,7 @@ nilead.backend.order.create:
     defaults:
         _controller:  nilead.controller.order:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Order:create.html.twig
+            template: NileadWebBundle:Order:create.html.twig
             redirect: nilead.backend.shipping_category.index
             
 nilead.backend.order.show:
@@ -23,7 +23,7 @@ nilead.backend.order.show:
     defaults:
         _controller:  nilead.controller.order:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Order:show.html.twig
+            template: NileadWebBundle:Order:show.html.twig
 
 nilead.backend.order.update:
     path: /{id}/edit/
@@ -33,7 +33,7 @@ nilead.backend.order.update:
     defaults:
         _controller:  nilead.controller.order:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Order:update.html.twig
+            template: NileadWebBundle:Order:update.html.twig
             redirect: nilead.backend.shipping_category.index
 
 nilead.backend.order.delete:

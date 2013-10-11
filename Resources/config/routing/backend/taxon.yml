@@ -5,7 +5,7 @@ nilead.backend.taxon.index:
     defaults:
         _controller: nilead.controller.taxon:indexAction
         _nilead:
-           template: NileadWebBundle:Backend/Taxon:index.html.twig
+           template: NileadWebBundle:Taxon:index.html.twig
             # method: createPaginator
 #            arguments: [$criteria, $sorting]
 
@@ -15,7 +15,7 @@ nilead.backend.taxon.create:
     defaults:
         _controller: nilead.controller.taxon:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Taxon:create.html.twig
+            template: NileadWebBundle:Taxon:create.html.twig
             redirect: nilead.backend.taxon.update
 
 nilead.backend.taxon.store:
@@ -24,7 +24,7 @@ nilead.backend.taxon.store:
     defaults:
         _controller: nilead.controller.taxon:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Taxon:create.html.twig
+            template: NileadWebBundle:Taxon:create.html.twig
             redirect: nilead.backend.taxon.update
 
 nilead.backend.taxon.update:
@@ -33,7 +33,7 @@ nilead.backend.taxon.update:
     defaults:
         _controller: nilead.controller.taxon:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Taxon:update.html.twig
+            template: NileadWebBundle:Taxon:update.html.twig
             redirect: nilead.backend.taxon.update
 
 nilead.backend.taxon.delete:
@@ -50,7 +50,7 @@ nilead.backend.taxon.filter_form:
     defaults:
         _controller: nilead.controller.taxon:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Taxon:filterForm.html.twig
+            template: NileadWebBundle:Taxon:filterForm.html.twig
 
 nilead.backend.taxon.show:
     pattern: /{id}
@@ -58,4 +58,4 @@ nilead.backend.taxon.show:
     defaults:
         _controller: nilead.controller.taxon:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Taxon:show.html.twig
+            template: NileadWebBundle:Taxon:show.html.twig

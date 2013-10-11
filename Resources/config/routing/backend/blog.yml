@@ -5,7 +5,7 @@ nilead.backend.post.index:
     defaults:
         _controller: nilead.controller.post:indexAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:index.html.twig
+            template: NileadWebBundle:Blog:index.html.twig
             method: createPaginator
 #            arguments: [$criteria, $sorting]
 
@@ -15,7 +15,7 @@ nilead.backend.post.create:
     defaults:
         _controller: nilead.controller.post:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:create.html.twig
+            template: NileadWebBundle:Blog:create.html.twig
             redirect: nilead.backend.post.update
 
 nilead.backend.post.store:
@@ -24,7 +24,7 @@ nilead.backend.post.store:
     defaults:
         _controller: nilead.controller.post:createAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:create.html.twig
+            template: NileadWebBundle:Blog:create.html.twig
             redirect: nilead.backend.post.update
 
 nilead.backend.post.update:
@@ -33,7 +33,7 @@ nilead.backend.post.update:
     defaults:
         _controller: nilead.controller.post:updateAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:update.html.twig
+            template: NileadWebBundle:Blog:update.html.twig
             redirect: nilead.backend.post.update
 
 nilead.backend.post.delete:
@@ -50,7 +50,7 @@ nilead.backend.post.filter_form:
     defaults:
         _controller: nilead.controller.post:filterFormAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:filterForm.html.twig
+            template: NileadWebBundle:Blog:filterForm.html.twig
 
 nilead.backend.post.show:
     pattern: /{id}
@@ -58,4 +58,4 @@ nilead.backend.post.show:
     defaults:
         _controller: nilead.controller.post:showAction
         _nilead:
-            template: NileadWebBundle:Backend/Blog:show.html.twig
+            template: NileadWebBundle:Blog:show.html.twig
