@@ -13,14 +13,11 @@
 
 namespace Nilead\WebBundle;
 
-use Nilead\ResourceBundle\DependencyInjection\Compiler\ResolveDoctrineTargetEntitiesPass;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-
 
 /**
- * Bundle.
- *
+ * Class NileadWebBundle
+ * @package Nilead\WebBundle
  */
 class NileadWebBundle extends Bundle
 {

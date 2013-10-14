@@ -10,7 +10,11 @@
 
 namespace Nilead\WebBundle\Menu;
 
-
-class BackendMenuBuilder extends MenuBuilder {
+/**
+ * Class BackendMenuBuilder
+ * @package Nilead\WebBundle\Menu
+ */
+class BackendMenuBuilder extends MenuBuilder
+{
 
 }

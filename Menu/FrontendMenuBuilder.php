@@ -15,6 +15,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class FrontendMenuBuilder extends MenuBuilder
 {
+    /**
+     * Create user account menu
+     *
+     * @param Request $request
+     * @return mixed
+     */
     public function createUserAccountMenu(Request $request)
     {
         $menu = $this->factory->createItem('root');

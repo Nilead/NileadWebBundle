@@ -8,14 +8,18 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
 /**
- * This is the class that loads and manages your bundle configuration
- *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
+ * Class NileadWebExtension
+ * @package Nilead\WebBundle\DependencyInjection
  */
 class NileadWebExtension extends Extension
 {
     /**
-     * {@inheritdoc}
+     * Lpad configs
+     *
+     * @param array $config
+     * @param ContainerBuilder $container
+     *
+     * @return void
      */
     public function load(array $config, ContainerBuilder $container)
     {
